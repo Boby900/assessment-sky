@@ -29,7 +29,6 @@ export default function Main() {
           Enjoy top performance, strong security, and 24/7 reliability
         </p>
 
-        {/* Cloud Services Diagram - Now using relative units */}
         <div
           className="relative w-full max-w-[90vw] aspect-square mx-auto mb-12"
           style={{ maxWidth: "600px" }}
@@ -41,7 +40,6 @@ export default function Main() {
             </div>
           </div>
 
-          {/* Orbital Icons - Using percentage-based positioning */}
           <div className="absolute inset-0">
             {/* Top */}
             <div className="absolute top-[5%] left-1/2 transform -translate-x-1/2">
@@ -98,22 +96,6 @@ export default function Main() {
   
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 gap-6 relative">
-              {/* Server Stack Illustration in Center */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-32 h-48">
-                  {[...Array(5)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute w-full h-10 bg-blue-600/20 border border-blue-500/30 transform rotate-12 skew-x-12"
-                      style={{
-                        top: `${i * 20}%`,
-                        filter: "drop-shadow(0 0 8px rgba(59, 130, 246, 0.5))",
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-  
               {/* Metrics */}
               <MetricCard value="99.9%" label="Up-Time Guarantee" color="text-yellow-500" />
               <MetricCard value="100%" label="High-Level Security" color="text-blue-500" />
