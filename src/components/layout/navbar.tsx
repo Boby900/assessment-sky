@@ -1,13 +1,15 @@
 import Link from "next/link"
-import { Button } from "../ui/button"
+import { Button } from "@/components/ui/button"
 import Image from "next/image"
-export default function Navbar(){
-    return(
-        <nav className="container mx-auto px-4 py-4">
+
+export default function Navbar() {
+  return (
+    <nav className="absolute top-0 left-0 right-0 z-50">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-8">
             <Link href="/" className="text-2xl font-bold text-white">
-            <Image src="/moon.png" height={30} width={40} alt="logo" />
+              <Image src="/moon.png" height={30} width={40} alt="logo" />
             </Link>
             <div className="hidden md:flex items-center space-x-6">
               <div className="relative group">
@@ -31,7 +33,8 @@ export default function Navbar(){
             <Button className="bg-blue-600 hover:bg-blue-700 text-white">Sign up</Button>
           </div>
         </div>
-      </nav>
-
-    )
+      </div>
+    </nav>
+  )
 }
+
