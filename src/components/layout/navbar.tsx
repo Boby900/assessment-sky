@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "../ui/button"
 import Image from "next/image"
+import Main from "./main"
 export default function Navbar(){
     return(
         <nav className="container mx-auto px-4 py-4">
@@ -30,6 +31,9 @@ export default function Navbar(){
             </Button>
             <Button className="bg-blue-600 hover:bg-blue-700 text-white">Sign up</Button>
           </div>
+<div>
+  <Main />
+</div>
         </div>
       </nav>
 
