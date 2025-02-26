@@ -9,7 +9,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-8">
             <Link href="/" className="text-2xl font-bold text-white">
-              <Image src="/moon.png" height={30} width={40} alt="logo" />
+              <Image src="/icons8-coc-coc-48.png" height={30} width={40} alt="logo" />
             </Link>
             <div className="hidden md:flex items-center space-x-6">
               <div className="relative group">

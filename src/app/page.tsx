@@ -1,5 +1,8 @@
 import Navbar from "@/components/layout/navbar";
 import Main from "@/components/layout/main";
+import Section2 from "@/components/layout/section2";
+import Section3 from "@/components/layout/section3";
+import { Footer } from "@/components/layout/footer";
 
 export default function Page() {
   return (
@@ -10,8 +13,14 @@ export default function Page() {
       <div>
         <Main />
       </div>
-      <div className="text-yellow-500 border-2">
-        hello bob
+      <div>
+        <Section2 />
+      </div>
+      <div>
+        <Section3 />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

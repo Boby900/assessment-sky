@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 export default function Main() {
     return (
-      <section className="relative bg-[#020817] py-24 overflow-hidden mt-20">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-[url('https://images.unsplash.com/photo-1510906594845-bc082582c8cc?q=20&w=1444&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-[#020817] py-24 overflow-hidden mt-20">
+        <div className="container mx-auto px-4 ">
         <main className="container mx-auto px-4 py-20 text-center relative">
         <p className="text-lg text-gray-300 mb-4">
           Secure. Scalable. Always Reliable
@@ -81,7 +81,7 @@ export default function Main() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text">
+              <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-white text-transparent bg-clip-text">
                 From Start to Scale,
                 <br />
                 Cloud Solutions for
