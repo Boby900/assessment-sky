@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/navbar";
 import Main from "@/components/layout/main";
+import Section2 from "@/components/layout/section2";
 
 export default function Page() {
   return (
@@ -11,7 +12,7 @@ export default function Page() {
         <Main />
       </div>
       <div className="text-yellow-500 border-2">
-        hello bob
+        <Section2 />
       </div>
     </div>
   );
