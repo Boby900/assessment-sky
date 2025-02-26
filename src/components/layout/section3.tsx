@@ -49,7 +49,7 @@ export default function Section3() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-300">
             Cloud Solutions Perfectly Aligned
             <br />
             with Your Needs
