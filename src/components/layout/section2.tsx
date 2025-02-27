@@ -78,7 +78,7 @@ export default function Section2() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <h3 className="font-semibold text-lg">{feature.title}</h3>
+                    <h3 className="font-semibold text-slate-400 text-lg">{feature.title}</h3>
                     {feature.isNew && <Badge className="bg-blue-500/10 text-blue-500 hover:bg-blue-500/20">New</Badge>}
                   </div>
                   <p className="text-gray-400 text-sm">{feature.description}</p>
