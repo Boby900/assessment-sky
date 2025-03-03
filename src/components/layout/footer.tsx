@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Loader2, Youtube } from "lucide-react";
 import { Twitter } from "lucide-react";
 import { useState } from "react";
 
@@ -38,9 +38,11 @@ const socialLinks = [
 
 export function Footer() {
   const [email, setEmail] = useState("");
-
+  const [successMessage, setSuccessMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Add loading state
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent default form submission
+    setIsLoading(true); // Set loading to true
 
     // Send the email to your API route
     try {
@@ -53,14 +55,19 @@ export function Footer() {
       });
 
       if (response.ok) {
-        // Handle successful subscription (e.g., show a success message)
-        console.log("Subscribed successfully!");
+        setSuccessMessage("Subscribed successfully!");
+        setEmail(""); // Reset the email input
       } else {
-        // Handle errors (e.g., display an error message)
-        console.error("Subscription failed.");
+        setSuccessMessage("Subscription failed.");
       }
     } catch (error) {
+      setSuccessMessage("An error occurred.");
       console.error("An error occurred:", error);
+    } finally {
+      setIsLoading(false); // Set loading to false
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 3000);
     }
   };
   return (
@@ -143,16 +150,24 @@ export function Footer() {
                 type="email"
                 placeholder="Enter your email"
                 className="bg-gray-900 text-white border-gray-800"
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <Button
                 className="bg-blue-600 hover:bg-blue-700 text-white"
                 type="submit"
+                disabled={isLoading}
               >
-                Subscribe
+                {isLoading ? (
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                ) : (
+                  "Subscribe"
+                )}{" "}
               </Button>
             </form>
+            {successMessage && (
+              <p className="text-green-500">{successMessage}</p>
+            )}
           </div>
         </div>
 

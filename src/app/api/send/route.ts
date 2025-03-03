@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) { // Specify NextRequest type
     const { email } = body; // Get email from request body
 
     const { data, error } = await resend.emails.send({
-      from: 'Sunshine <onboarding@resend.dev>',
+      from: 'Sunshine <newsletter@bobytiwari.tech>',
       to: [email],
       subject: 'Hello from the sunshine💀',
       react: EmailTemplate({ firstName: email }),
